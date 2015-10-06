@@ -9,3 +9,7 @@ WORKDIR /usr/local/src/git
 RUN make prefix=/usr/local all
 RUN make prefix=/usr/local install
 RUN yum -y remove git
+
+# remove
+WORKDIR /root
+RUN rm -rf /usr/local/src/git
