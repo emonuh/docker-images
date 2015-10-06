@@ -5,7 +5,7 @@ MAINTAINER emonuh
 RUN yum -y install curl-devel expat-devel gettext-devel openssl-devel zlib-devel make gcc perl-ExtUtils-MakeMaker wget
 
 # install git
-RUN yum -y install
+RUN yum -y install git
 WORKDIR /usr/local/src
 RUN git clone git://git.kernel.org/pub/scm/git/git.git
 WORKDIR /usr/local/src/git
