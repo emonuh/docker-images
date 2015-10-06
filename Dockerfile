@@ -1,8 +1,11 @@
 FROM centos:7
 MAINTAINER emonuh
 
+# install basic commands
+RUN yum -y install curl-devel expat-devel gettext-devel openssl-devel zlib-devel make gcc perl-ExtUtils-MakeMaker wget
+
 # install git
-RUN yum -y install git curl-devel expat-devel gettext-devel openssl-devel zlib-devel make gcc perl-ExtUtils-MakeMaker
+RUN yum -y install
 WORKDIR /usr/local/src
 RUN git clone git://git.kernel.org/pub/scm/git/git.git
 WORKDIR /usr/local/src/git
